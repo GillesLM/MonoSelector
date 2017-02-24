@@ -204,7 +204,7 @@
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">15</Property>
+				<Property Name="Bld_version.build" Type="Int">16</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">MonoSelector.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Mono Selector/MonoSelector.exe</Property>
@@ -336,7 +336,7 @@
 				<Property Name="INST_buildSpecName" Type="Str">Mono Selector Installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{6109F245-3F53-4D6C-A12B-1B7713A23B93}</Property>
 				<Property Name="INST_productName" Type="Str">Mono Selector</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.2</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.3</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">13018020</Property>
 				<Property Name="MSI_arpCompany" Type="Str">IGDR - CNRS</Property>
