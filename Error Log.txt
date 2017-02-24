@@ -36,3 +36,27 @@ device or resource not present.error: Please check if NI VISA is installed  prop
 Possible reasons: 
 invalid host name, port or interface number,
 device or resource not present.error: Please check if NI VISA is installed  properly. Errorcode: -1073807343
+13:43:26 24/02/2017	-1073807343	Open interface error: Could not open connection.
+Possible reasons: 
+invalid host name, port or interface number,
+device or resource not present.error: Please check if NI VISA is installed  properly. Errorcode: -1073807343
+13:43:33 24/02/2017	-1073807343	Open interface error: Could not open connection.
+Possible reasons: 
+invalid host name, port or interface number,
+device or resource not present.error: Please check if NI VISA is installed  properly. Errorcode: -1073807343
+13:47:26 24/02/2017	-1073807343	Open interface error: Could not open connection.
+Possible reasons: 
+invalid host name, port or interface number,
+device or resource not present.error: Please check if NI VISA is installed  properly. Errorcode: -1073807343
+13:53:05 24/02/2017	0	No devices
+13:53:09 24/02/2017	-7	Timeout error
+13:53:11 24/02/2017	-1073807343	Open interface error: Could not open connection.
+Possible reasons: 
+invalid host name, port or interface number,
+device or resource not present.error: Please check if NI VISA is installed  properly. Errorcode: -1073807343
+14:30:23 24/02/2017	0	Spectro. : No devices
+14:30:27 24/02/2017	-7	Slit : Timeout error
+14:30:29 24/02/2017	-1073807343	Spectro. : Open interface error: Could not open connection.
+Possible reasons: 
+invalid host name, port or interface number,
+device or resource not present.error: Please check if NI VISA is installed  properly. Errorcode: -1073807343

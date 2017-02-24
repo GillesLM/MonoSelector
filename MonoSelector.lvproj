@@ -177,6 +177,7 @@
 				<Item Name="Wrapper_getIntegrationTime.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_getIntegrationTime.vi"/>
 				<Item Name="Wrapper_closeSpectrometer.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_closeSpectrometer.vi"/>
 				<Item Name="Wrapper_getSpectrum.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_getSpectrum.vi"/>
+				<Item Name="SVO.vi" Type="VI" URL="/&lt;userlib&gt;/GCSLabView/Low Level/General command.llb/SVO.vi"/>
 			</Item>
 			<Item Name="OmniDriver32.dll" Type="Document" URL="OmniDriver32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -204,7 +205,7 @@
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">16</Property>
+				<Property Name="Bld_version.build" Type="Int">19</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">MonoSelector.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Mono Selector/MonoSelector.exe</Property>
@@ -331,12 +332,12 @@
 				<Property Name="DistPartCount" Type="Int">4</Property>
 				<Property Name="INST_author" Type="Str">Hewlett-Packard Company</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
-				<Property Name="INST_buildLocation" Type="Path">../builds/MonoV2</Property>
+				<Property Name="INST_buildLocation" Type="Path">../builds/MonoSelector</Property>
 				<Property Name="INST_buildLocation.type" Type="Str">relativeToCommon</Property>
 				<Property Name="INST_buildSpecName" Type="Str">Mono Selector Installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{6109F245-3F53-4D6C-A12B-1B7713A23B93}</Property>
 				<Property Name="INST_productName" Type="Str">Mono Selector</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.3</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.6</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">13018020</Property>
 				<Property Name="MSI_arpCompany" Type="Str">IGDR - CNRS</Property>
