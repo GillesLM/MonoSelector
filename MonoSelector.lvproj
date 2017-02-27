@@ -342,7 +342,7 @@
 				<Property Name="INST_buildSpecName" Type="Str">Mono Selector Installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{6109F245-3F53-4D6C-A12B-1B7713A23B93}</Property>
 				<Property Name="INST_productName" Type="Str">Mono Selector</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.9</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.11</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">13018020</Property>
 				<Property Name="MSI_arpCompany" Type="Str">IGDR - CNRS</Property>
