@@ -184,12 +184,10 @@
 				<Item Name="Wrapper_getSpectrum.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_getSpectrum.vi"/>
 				<Item Name="SVO.vi" Type="VI" URL="/&lt;userlib&gt;/GCSLabView/Low Level/General command.llb/SVO.vi"/>
 			</Item>
-			<Item Name="OmniDriver32.dll" Type="Document" URL="OmniDriver32.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 			<Item Name="common32.dll" Type="Document" URL="common32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="OmniDriver32.dll" Type="Document" URL="/C/Program Files (x86)/Ocean Optics/OmniDriverSPAM/OOI_HOME/OmniDriver32.dll"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Mono Selector" Type="EXE">
@@ -210,7 +208,7 @@
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">30</Property>
+				<Property Name="Bld_version.build" Type="Int">37</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">MonoSelector.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Mono Selector/MonoSelector.exe</Property>
