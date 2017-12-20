@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="13008000">
+<Project Type="Project" LVVersion="17008000">
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
@@ -41,10 +41,10 @@
 					<Item Name="FGV Slit Data.ctl" Type="VI" URL="../Devices/Slit/FGV/FGV Slit Data.ctl"/>
 					<Item Name="Action Slit.ctl" Type="VI" URL="../Devices/Slit/FGV/Action Slit.ctl"/>
 				</Item>
-				<Item Name="Slit config.ctl" Type="VI" URL="../Devices/Slit/Slit config.ctl"/>
-				<Item Name="Slit Controller.vi" Type="VI" URL="../Devices/Slit/Slit Controller.vi"/>
-				<Item Name="Slit UI data.ctl" Type="VI" URL="../Devices/Slit/Slit UI data.ctl"/>
 				<Item Name="Slit.vi" Type="VI" URL="../Devices/Slit/Slit.vi"/>
+				<Item Name="Slit Controller.vi" Type="VI" URL="../Devices/Slit/Slit Controller.vi"/>
+				<Item Name="Slit config.ctl" Type="VI" URL="../Devices/Slit/Slit config.ctl"/>
+				<Item Name="Slit UI data.ctl" Type="VI" URL="../Devices/Slit/Slit UI data.ctl"/>
 			</Item>
 			<Item Name="Positioner" Type="Folder">
 				<Item Name="FGV Positioner" Type="Folder">
@@ -52,10 +52,22 @@
 					<Item Name="Action Pos.ctl" Type="VI" URL="../Devices/Positioner/FGV/Action Pos.ctl"/>
 					<Item Name="FGV Pos Data.ctl" Type="VI" URL="../Devices/Positioner/FGV/FGV Pos Data.ctl"/>
 				</Item>
-				<Item Name="Pos Config.ctl" Type="VI" URL="../Devices/Positioner/Pos Config.ctl"/>
-				<Item Name="Pos Controller.vi" Type="VI" URL="../Devices/Positioner/Pos Controller.vi"/>
 				<Item Name="Positioner.vi" Type="VI" URL="../Devices/Positioner/Positioner.vi"/>
+				<Item Name="Pos Controller.vi" Type="VI" URL="../Devices/Positioner/Pos Controller.vi"/>
+				<Item Name="Pos Config.ctl" Type="VI" URL="../Devices/Positioner/Pos Config.ctl"/>
 				<Item Name="Pos UI data.ctl" Type="VI" URL="../Devices/Positioner/Pos UI data.ctl"/>
+			</Item>
+			<Item Name="Laser" Type="Folder">
+				<Item Name="FGV Laser" Type="Folder">
+					<Item Name="FGV Laser.vi" Type="VI" URL="../Devices/Laser/FGV Laser/FGV Laser.vi"/>
+					<Item Name="Action Laser.ctl" Type="VI" URL="../Devices/Laser/FGV Laser/Action Laser.ctl"/>
+					<Item Name="FGV Laser Data.ctl" Type="VI" URL="../Devices/Laser/FGV Laser/FGV Laser Data.ctl"/>
+					<Item Name="PulsePickerValues.ctl" Type="VI" URL="../Devices/Laser/PulsePickerValues.ctl"/>
+				</Item>
+				<Item Name="Laser.vi" Type="VI" URL="../Devices/Laser/Laser.vi"/>
+				<Item Name="Laser Controller.vi" Type="VI" URL="../Devices/Laser/Laser Controller.vi"/>
+				<Item Name="Laser config.ctl" Type="VI" URL="../Devices/Laser/Laser config.ctl"/>
+				<Item Name="Laser UI data.ctl" Type="VI" URL="../Devices/Laser/Laser UI data.ctl"/>
 			</Item>
 			<Item Name="Manager UI Data.ctl" Type="VI" URL="../Devices/Manager UI Data.ctl"/>
 			<Item Name="DevicesManager.vi" Type="VI" URL="../Devices/DevicesManager.vi"/>
@@ -73,6 +85,7 @@
 			<Item Name="Controller To Device.vi" Type="VI" URL="../Controller To Device.vi"/>
 			<Item Name="Open system.vi" Type="VI" URL="../support/Open system.vi"/>
 			<Item Name="Status.vi" Type="VI" URL="../support/Status.vi"/>
+			<Item Name="StringSup.vi" Type="VI" URL="../support/StringSup.vi"/>
 		</Item>
 		<Item Name="Doc" Type="Folder"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
@@ -118,12 +131,13 @@
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
-				<Item Name="General Error Handler CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler CORE.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
+				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
+				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Controller names.ctl" Type="VI" URL="/&lt;userlib&gt;/GCSLabView/Low Level/General command.llb/Controller names.ctl"/>
@@ -171,23 +185,25 @@
 				<Item Name="VEL?.vi" Type="VI" URL="/&lt;userlib&gt;/GCSLabView/Low Level/General command.llb/VEL?.vi"/>
 				<Item Name="Define connected systems (Array).vi" Type="VI" URL="/&lt;userlib&gt;/GCSLabView/Low Level/General command.llb/Define connected systems (Array).vi"/>
 				<Item Name="CST?.vi" Type="VI" URL="/&lt;userlib&gt;/GCSLabView/Low Level/Special command.llb/CST?.vi"/>
-				<Item Name="Wrapper_setCorrectForElectricalDark.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_setCorrectForElectricalDark.vi"/>
-				<Item Name="Wrapper_getWavelengths.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_getWavelengths.vi"/>
-				<Item Name="Wrapper_setIntegrationTime.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_setIntegrationTime.vi"/>
-				<Item Name="Wrapper_setScansToAverage.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_setScansToAverage.vi"/>
-				<Item Name="Wrapper_openAllSpectrometers.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_openAllSpectrometers.vi"/>
-				<Item Name="Wrapper_getSerialNumber.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_getSerialNumber.vi"/>
-				<Item Name="Wrapper_Create.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_Create.vi"/>
-				<Item Name="Wrapper_Destroy.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_Destroy.vi"/>
-				<Item Name="Wrapper_getIntegrationTime.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_getIntegrationTime.vi"/>
-				<Item Name="Wrapper_closeSpectrometer.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_closeSpectrometer.vi"/>
-				<Item Name="Wrapper_getSpectrum.vi" Type="VI" URL="/&lt;userlib&gt;/Ocen Optics/Wrapper.llb/Wrapper_getSpectrum.vi"/>
 				<Item Name="SVO.vi" Type="VI" URL="/&lt;userlib&gt;/GCSLabView/Low Level/General command.llb/SVO.vi"/>
+				<Item Name="Wrapper_Create.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_Create.vi"/>
+				<Item Name="Wrapper_openAllSpectrometers.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_openAllSpectrometers.vi"/>
+				<Item Name="Wrapper_getSerialNumber.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_getSerialNumber.vi"/>
+				<Item Name="Wrapper_setIntegrationTime.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_setIntegrationTime.vi"/>
+				<Item Name="Wrapper_getIntegrationTime.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_getIntegrationTime.vi"/>
+				<Item Name="Wrapper_setScansToAverage.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_setScansToAverage.vi"/>
+				<Item Name="Wrapper_setCorrectForElectricalDark.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_setCorrectForElectricalDark.vi"/>
+				<Item Name="Wrapper_getSpectrum.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_getSpectrum.vi"/>
+				<Item Name="Wrapper_getWavelengths.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_getWavelengths.vi"/>
+				<Item Name="Wrapper_closeSpectrometer.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_closeSpectrometer.vi"/>
+				<Item Name="Wrapper_Destroy.vi" Type="VI" URL="/&lt;userlib&gt;/Wrapper.llb/Wrapper_Destroy.vi"/>
 			</Item>
 			<Item Name="common32.dll" Type="Document" URL="common32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="OmniDriver32.dll" Type="Document" URL="/C/Program Files (x86)/Ocean Optics/OmniDriverSPAM/OOI_HOME/OmniDriver32.dll"/>
+			<Item Name="OmniDriver32.dll" Type="Document" URL="OmniDriver32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Mono Selector" Type="EXE">
@@ -295,43 +311,28 @@
 				<Property Name="DistPart[2].productName" Type="Str">NI-VISA Runtime 15.0.1</Property>
 				<Property Name="DistPart[2].upgradeCode" Type="Str">{8627993A-3F66-483C-A562-0D3BA3F267B1}</Property>
 				<Property Name="DistPart[3].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[3].productID" Type="Str">{8B9F3A2F-2B27-4893-BC35-556873EDA6EF}</Property>
-				<Property Name="DistPart[3].productName" Type="Str">NI LabVIEW Run-Time Engine 2013 SP1 f5</Property>
+				<Property Name="DistPart[3].productID" Type="Str">{F8C28DE1-1E13-4D22-AC1B-A09B86F991EC}</Property>
+				<Property Name="DistPart[3].productName" Type="Str">NI LabVIEW Runtime 2017 f2</Property>
 				<Property Name="DistPart[3].SoftDep[0].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[0].productName" Type="Str">NI LabVIEW 2013 SP1 Run-Time Engine Non-English Support.</Property>
-				<Property Name="DistPart[3].SoftDep[0].upgradeCode" Type="Str">{DDE96050-C9ED-4EAC-B310-5EA217776FEA}</Property>
+				<Property Name="DistPart[3].SoftDep[0].productName" Type="Str">NI ActiveX Container</Property>
+				<Property Name="DistPart[3].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
 				<Property Name="DistPart[3].SoftDep[1].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[1].productName" Type="Str">NI ActiveX Container</Property>
-				<Property Name="DistPart[3].SoftDep[1].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
-				<Property Name="DistPart[3].SoftDep[10].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[10].productName" Type="Str">NI Error Reporting 2013</Property>
-				<Property Name="DistPart[3].SoftDep[10].upgradeCode" Type="Str">{42E818C6-2B08-4DE7-BD91-B0FD704C119A}</Property>
+				<Property Name="DistPart[3].SoftDep[1].productName" Type="Str">NI Logos 5.9</Property>
+				<Property Name="DistPart[3].SoftDep[1].upgradeCode" Type="Str">{5E4A4CE3-4D06-11D4-8B22-006008C16337}</Property>
 				<Property Name="DistPart[3].SoftDep[2].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[2].productName" Type="Str">NI System Web Server 13.0</Property>
-				<Property Name="DistPart[3].SoftDep[2].upgradeCode" Type="Str">{FCF64B73-B7D4-4971-8F11-24BAF7CC3E6C}</Property>
+				<Property Name="DistPart[3].SoftDep[2].productName" Type="Str">NI TDM Streaming 17.0</Property>
+				<Property Name="DistPart[3].SoftDep[2].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
 				<Property Name="DistPart[3].SoftDep[3].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[3].productName" Type="Str">Math Kernel Libraries</Property>
-				<Property Name="DistPart[3].SoftDep[3].upgradeCode" Type="Str">{EA05DCF9-F239-4387-8904-04D678031F6B}</Property>
+				<Property Name="DistPart[3].SoftDep[3].productName" Type="Str">NI VC2008MSMs</Property>
+				<Property Name="DistPart[3].SoftDep[3].upgradeCode" Type="Str">{FDA3F8BB-BAA9-45D7-8DC7-22E1F5C76315}</Property>
 				<Property Name="DistPart[3].SoftDep[4].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[4].productName" Type="Str">NI Logos 5.5</Property>
-				<Property Name="DistPart[3].SoftDep[4].upgradeCode" Type="Str">{5E4A4CE3-4D06-11D4-8B22-006008C16337}</Property>
+				<Property Name="DistPart[3].SoftDep[4].productName" Type="Str">NI VC2010MSMs</Property>
+				<Property Name="DistPart[3].SoftDep[4].upgradeCode" Type="Str">{EFBA6F9E-F934-4BD7-AC51-60CCA480489C}</Property>
 				<Property Name="DistPart[3].SoftDep[5].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[5].productName" Type="Str">NI TDM Streaming 2.4</Property>
-				<Property Name="DistPart[3].SoftDep[5].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
-				<Property Name="DistPart[3].SoftDep[6].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[6].productName" Type="Str">NI LabVIEW 2013 Web Server</Property>
-				<Property Name="DistPart[3].SoftDep[6].upgradeCode" Type="Str">{A66A5CC8-EEB5-4982-8B92-F591AF36060E}</Property>
-				<Property Name="DistPart[3].SoftDep[7].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[7].productName" Type="Str">NI LabVIEW 2013 Real-Time NBFifo</Property>
-				<Property Name="DistPart[3].SoftDep[7].upgradeCode" Type="Str">{76E4763E-0DC4-4195-BC50-084193FFA84B}</Property>
-				<Property Name="DistPart[3].SoftDep[8].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[8].productName" Type="Str">NI VC2008MSMs</Property>
-				<Property Name="DistPart[3].SoftDep[8].upgradeCode" Type="Str">{FDA3F8BB-BAA9-45D7-8DC7-22E1F5C76315}</Property>
-				<Property Name="DistPart[3].SoftDep[9].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[3].SoftDep[9].productName" Type="Str">NI VC2010MSMs</Property>
-				<Property Name="DistPart[3].SoftDep[9].upgradeCode" Type="Str">{EFBA6F9E-F934-4BD7-AC51-60CCA480489C}</Property>
-				<Property Name="DistPart[3].SoftDepCount" Type="Int">11</Property>
-				<Property Name="DistPart[3].upgradeCode" Type="Str">{A661D981-0A3B-4081-A5B5-1FAA03CFAF84}</Property>
+				<Property Name="DistPart[3].SoftDep[5].productName" Type="Str">NI Error Reporting 2017</Property>
+				<Property Name="DistPart[3].SoftDep[5].upgradeCode" Type="Str">{42E818C6-2B08-4DE7-BD91-B0FD704C119A}</Property>
+				<Property Name="DistPart[3].SoftDepCount" Type="Int">6</Property>
+				<Property Name="DistPart[3].upgradeCode" Type="Str">{620DBAE1-B159-4204-8186-0813C8A6434C}</Property>
 				<Property Name="DistPartCount" Type="Int">4</Property>
 				<Property Name="INST_author" Type="Str">Hewlett-Packard Company</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
@@ -342,7 +343,7 @@
 				<Property Name="INST_productName" Type="Str">Mono Selector</Property>
 				<Property Name="INST_productVersion" Type="Str">1.0.16</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
-				<Property Name="InstSpecVersion" Type="Str">13018020</Property>
+				<Property Name="InstSpecVersion" Type="Str">17008011</Property>
 				<Property Name="MSI_arpCompany" Type="Str">IGDR - CNRS</Property>
 				<Property Name="MSI_arpContact" Type="Str">Gilles LE MARCHAND</Property>
 				<Property Name="MSI_arpPhone" Type="Str">02 23 23 44 17</Property>
