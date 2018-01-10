@@ -60,3 +60,4 @@ device or resource not present.error: Please check if NI VISA is installed  prop
 Possible reasons: 
 invalid host name, port or interface number,
 device or resource not present.error: Please check if NI VISA is installed  properly. Errorcode: -1073807343
+14:22:43 09/01/2018	-1073807343	Laser : Property Node (arg 1) in VISA Configure Serial Port (Instr).vi->FGV Laser.vi->Laser.vi->Main.vi
