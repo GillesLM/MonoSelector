@@ -11,10 +11,6 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="LongWave Converter" Type="Folder">
-			<Item Name="PosToLO.vi" Type="VI" URL="../Fonction de transfert/PosToLO.vi"/>
-			<Item Name="Convertion.ctl" Type="VI" URL="../Fonction de transfert/Convertion.ctl"/>
-		</Item>
 		<Item Name="Device" Type="Folder">
 			<Item Name="Spectrometer" Type="Folder">
 				<Item Name="FGV Spectrometer" Type="Folder">
@@ -80,6 +76,10 @@
 			<Item Name="IHM Control.lvlib" Type="Library" URL="../Lib IHM Control/IHM Control.lvlib"/>
 		</Item>
 		<Item Name="Support" Type="Folder">
+			<Item Name="LongWave Converter" Type="Folder">
+				<Item Name="PosToLO.vi" Type="VI" URL="../Fonction de transfert/PosToLO.vi"/>
+				<Item Name="Convertion.ctl" Type="VI" URL="../Fonction de transfert/Convertion.ctl"/>
+			</Item>
 			<Item Name="MHL UI Data.ctl" Type="VI" URL="../Lib IHM Control/MHL UI Data.ctl"/>
 			<Item Name="MHL Data.ctl" Type="VI" URL="../Lib IHM Control/MHL Data.ctl"/>
 			<Item Name="Controller To Device.vi" Type="VI" URL="../Controller To Device.vi"/>
@@ -87,12 +87,12 @@
 			<Item Name="Status.vi" Type="VI" URL="../support/Status.vi"/>
 			<Item Name="StringSup.vi" Type="VI" URL="../support/StringSup.vi"/>
 			<Item Name="Com2Visa.vi" Type="VI" URL="../support/Com2Visa.vi"/>
+			<Item Name="PowerConvertor.vi" Type="VI" URL="../support/PowerConvertor.vi"/>
 		</Item>
 		<Item Name="Doc" Type="Folder"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Main.rtm" Type="Document" URL="../Menu/Main.rtm"/>
 		<Item Name="Mono Selector.ico" Type="Document" URL="../Image/Icones/Mono Selector.ico"/>
-		<Item Name="PowerConvertor.vi" Type="VI" URL="../support/PowerConvertor.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
@@ -226,7 +226,7 @@
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">40</Property>
+				<Property Name="Bld_version.build" Type="Int">47</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">MonoSelector.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Mono Selector/MonoSelector.exe</Property>
@@ -242,14 +242,20 @@
 				<Property Name="Destination[4].path" Type="Path">../builds/NI_AB_PROJECTNAME/Mono Selector/Devices/Positioner</Property>
 				<Property Name="Destination[5].destName" Type="Str">Spectrometer</Property>
 				<Property Name="Destination[5].path" Type="Path">../builds/NI_AB_PROJECTNAME/Mono Selector/Devices/Spectrometer</Property>
-				<Property Name="DestinationCount" Type="Int">6</Property>
+				<Property Name="Destination[6].destName" Type="Str">Laser</Property>
+				<Property Name="Destination[6].path" Type="Path">../builds/NI_AB_PROJECTNAME/Mono Selector/Devices/Laser</Property>
+				<Property Name="DestinationCount" Type="Int">7</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Mono Selector.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{7C75E501-7092-4159-BDF0-F3AEC80E36E1}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{AA775A3C-D833-4F7B-9F55-326FB584F51D}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[10].destinationIndex" Type="Int">6</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/My Computer/Device/Laser/Laser.vi</Property>
+				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[10].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Device/Spectrometer/Spectro config.ctl</Property>
 				<Property Name="Source[2].type" Type="Str">VI</Property>
@@ -277,7 +283,7 @@
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Device/Positioner/Positioner.vi</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">10</Property>
+				<Property Name="SourceCount" Type="Int">11</Property>
 				<Property Name="TgtF_companyName" Type="Str">IGDR - CNRS</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Mono Selector is a program that driver the Handmade Monochromator use by the FastFlim Instrument.</Property>
 				<Property Name="TgtF_internalName" Type="Str">Mono Selector</Property>
@@ -360,7 +366,7 @@
 				<Property Name="INST_buildSpecName" Type="Str">Mono Selector Installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{6109F245-3F53-4D6C-A12B-1B7713A23B93}</Property>
 				<Property Name="INST_productName" Type="Str">Mono Selector</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.19</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.23</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">17008011</Property>
 				<Property Name="MSI_arpCompany" Type="Str">IGDR - CNRS</Property>
@@ -371,7 +377,7 @@
 				<Property Name="MSI_distID" Type="Str">{2072BC5D-0A60-4BAB-815B-5610EBBE089C}</Property>
 				<Property Name="MSI_osCheck" Type="Int">0</Property>
 				<Property Name="MSI_upgradeCode" Type="Str">{A410D937-5BF4-486A-8833-F00A90586682}</Property>
-				<Property Name="MSI_windowMessage" Type="Str">This installer will provide you le Mono Selector program. It will install a labview runtime 2013 and then the program "Mono Selector". Be sure you have installed, the PI positioner C663 and C867 drivers ; the Ocean Optics Omnidriver runtime drivers. You can dowload them at this adress : https://oceanoptics.com/support/software-downloads/</Property>
+				<Property Name="MSI_windowMessage" Type="Str">This installer will provide you the Mono Selector program. It will install a labview runtime 2017 and then the program "Mono Selector". Be sure you have installed, the PI positioner C663 and C867 drivers ; the Ocean Optics Omnidriver runtime drivers. You can dowload them at this adress : https://oceanoptics.com/support/software-downloads/</Property>
 				<Property Name="MSI_windowTitle" Type="Str">Welcom to the Mono Selector Installer</Property>
 				<Property Name="RegDest[0].dirName" Type="Str">Software</Property>
 				<Property Name="RegDest[0].dirTag" Type="Str">{DDFAFC8B-E728-4AC8-96DE-B920EBB97A86}</Property>
